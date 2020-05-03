@@ -81,7 +81,7 @@ function addMember() {
                             break;
                         case "Intern":
                             info = "school name";
-                            obj = new Intern(answers.name,answers.id,data.additionalInfo);
+                            obj = new Intern(answers.name,answers.id,answers.email,data.additionalInfo);
                             break;
                     }
 
@@ -95,7 +95,8 @@ function addMember() {
                         addMember();
                     }
                     else {
-                        process.exit(1);
+                        render(team);
+                        // process.exit(1);
                         };
 
                 })
